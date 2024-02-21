@@ -1,0 +1,135 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*,
+*::after,
+::before {
+     padding         : 0;
+     margin          : 0;
+     text-decoration : none;
+     box-sizing      : border-box;
+     }
+
+:root {
+     }
+
+@layer utilities {
+     html {
+          font-size : 16px;
+          }
+     
+     @media only screen and (max-width : 900px) {
+          html {
+               font-size : 15px;
+               }
+          }
+     @media only screen and (max-width : 800px) {
+          html {
+               font-size : 14px;
+               }
+          }
+     @media only screen and (max-height : 600px) {
+          html {
+               font-size : 13px;
+               }
+          }
+     /*  @media only screen and (max-width: 700px){
+         html{
+           font-size:12px;
+           }
+         }*/
+     }
+
+body {
+     font-family: 'Roboto', sans-serif;
+     }
+
+body::before {
+     content        : "";
+     position       : fixed;
+     top            : 0;
+     left           : 0;
+     width          : 100%;
+     height         : 100%;
+     pointer-events : none;
+     background     : #111727;
+     z-index        : -1;
+     }
+
+p {
+     color       :white;
+     font-weight : normal;
+     
+     }
+
+h1, h2, h3, h4, h5, h6 {
+     font-weight : bold;
+     }
+
+form, button, input {
+     font-family : inherit;
+     color       : inherit;
+     font-weight : 500;
+     }
+
+ol, ul {
+     list-style : none;
+     }
+
+img {
+     object-fit : cover;
+     max-width  : 100%;
+     display    : block;
+     height     : 400;
+     }
+
+table {
+     border-collapse : collapse;
+     }
+
+textarea {
+     white-space : revert;
+     }
+
+code {
+     font-family : source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+     monospace;
+     }
+
+/* width */
+::-webkit-scrollbar {
+     width  : 8px;
+     height : 8px;
+     }
+
+/* Track */
+::-webkit-scrollbar-track {
+     border-radius    : 10px;
+     background-color : #EEE;
+     }
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+     background    : #596281;
+     border-radius : 10px;
+     }
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+     background : #DC5E2E;
+     }
+
+@media only screen and (max-width : 600px) {
+     /* Works on Chrome/Edge/Safari */
+     *::-webkit-scrollbar {
+          height : 2px;
+          
+          }
+          
+     }
+
+::selection {
+     background-color : #DC5E2E;
+     color            : #FFF;
+     }
